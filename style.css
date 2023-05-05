@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- 
-body{
+
+body {
     background-image: url(img/outerspace-53.gif);
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,36 +14,39 @@ body{
 }
 
 #pulsar {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 12.5rem;
+    height: 12.5rem;
     margin-top: 16%;
     margin-left: 40%;
+
+}
+
+
+#pulsar:before,
+#pulsar::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left:33.125rem;
+    right: 37.5rem;
+    top: 12.5rem;
+    bottom: 200px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 253, 253);
+    animation: animar 1.5s linear infinite;
     
-}
-
-
-#pulsar:before, #pulsar::after{
- content: '';
- display: block;
- position: absolute;
- left: 530px;
- right: 600px;
- top: 200px;
- bottom: 200px;
- border-radius: 50%;
- border: 2px solid rgb(255, 0, 0);
- animation: animar 1.5s linear infinite;
- opacity: 0;
+    opacity: 0;
+    
 
 }
 
-#pulsar  h1{
+#pulsar h1 {
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     margin-top: 40%;
 }
+
 #pulsar a {
     text-decoration: none;
     cursor: pointer;
@@ -53,9 +56,7 @@ body{
 
 
 
-
-
-#pulsar::after{
+#pulsar::after {
     animation-delay: .5s;
 }
 
@@ -63,16 +64,54 @@ body{
     0% {
         transform: scale(0.5);
         opacity: 0;
-        
+
     }
 
     50% {
         opacity: 1;
 
     }
+
     100% {
         transform: scale(1.5);
         opacity: 0;
 
     }
+
+
+}
+
+
+@media (max-width: 600px) {
+
+   
+
+    #pulsar h1 {
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        margin-top: 130%;
+        margin-left: -50%;
+    }
+    
+    
+    #pulsar:before,
+    #pulsar::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 5rem;
+        right: 3rem;
+        top: 15rem;
+        bottom: 18rem;
+        border-radius: 50%;
+        border: 2px solid rgb(255, 253, 253);
+        animation: animar 1.5s linear infinite;
+
+    }
+
+    #pulsar::after {
+        animation-delay: .5s;
+    }
+    
 }
